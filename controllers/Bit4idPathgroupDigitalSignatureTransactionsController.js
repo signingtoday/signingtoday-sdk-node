@@ -1,6 +1,6 @@
 const Controller = require('./Controller');
 
-class DigitalSignatureTransactionsController {
+class Bit4idPathgroupDigitalSignatureTransactionsController {
   constructor(Service) {
     this.service = Service;
   }
@@ -63,4 +63,4 @@ class DigitalSignatureTransactionsController {
 
 }
 
-module.exports = DigitalSignatureTransactionsController;
+module.exports = Bit4idPathgroupDigitalSignatureTransactionsController;

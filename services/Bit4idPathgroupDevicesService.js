@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 const Service = require('./Service');
 
-class DevicesService {
+class Bit4idPathgroupDevicesService {
 
   /**
    * Clear a trusted device
@@ -96,4 +96,4 @@ class DevicesService {
 
 }
 
-module.exports = DevicesService;
+module.exports = Bit4idPathgroupDevicesService;

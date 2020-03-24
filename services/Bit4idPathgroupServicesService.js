@@ -1,37 +1,17 @@
 /* eslint-disable no-unused-vars */
 const Service = require('./Service');
 
-class BackofficeService {
+class Bit4idPathgroupServicesService {
 
   /**
-   * Sync all completed DSTs on Alfresco
+   * Consume a token to change the password
+   * This API allows to change the password by consuming a token.
    *
-   * id String The value of the unique id
-   * returns AlfrescoSync
-   **/
-  static organizationIdAlfrescoSyncGet({ id }) {
-    return new Promise(
-      async (resolve) => {
-        try {
-          resolve(Service.successResponse(''));
-        } catch (e) {
-          resolve(Service.rejectResponse(
-            e.message || 'Invalid input',
-            e.status || 405,
-          ));
-        }
-      },
-    );
-  }
-
-  /**
-   * Sync all completed DSTs on Alfresco
-   *
-   * id String The value of the unique id
-   * alfrescoSync AlfrescoSync Domain associated to the account.
+   * passwordToken String The password token issued to change password
+   * body String New password associated to the account (BCrypt)
    * no response value expected for this operation
    **/
-  static organizationIdAlfrescoSyncPost({ id, alfrescoSync }) {
+  static authChangePasswordPOST({ passwordToken, body }) {
     return new Promise(
       async (resolve) => {
         try {
@@ -47,14 +27,14 @@ class BackofficeService {
   }
 
   /**
-   * Enable or disable an Organization account.
-   * Enable or disable an Organization.
+   * Request to recover own password
+   * This API requests to recover the own password.
    *
-   * id String The value of the unique id
-   * enabled Boolean New status to set (optional)
+   * username String Username associated to the account
+   * domain String Domain associated to the account
    * no response value expected for this operation
    **/
-  static organizationIdDELETE({ id, enabled }) {
+  static authPasswordLostGET({ username, domain }) {
     return new Promise(
       async (resolve) => {
         try {
@@ -70,56 +50,14 @@ class BackofficeService {
   }
 
   /**
-   * Retrieve info on one organization
+   * Reset a user password with superuser
+   * This API allows to reset the password of a user. This is possible when the request is performed with a superuser.
    *
-   * id String The value of the unique id
-   * returns Organization
-   **/
-  static organizationIdGet({ id }) {
-    return new Promise(
-      async (resolve) => {
-        try {
-          resolve(Service.successResponse(''));
-        } catch (e) {
-          resolve(Service.rejectResponse(
-            e.message || 'Invalid input',
-            e.status || 405,
-          ));
-        }
-      },
-    );
-  }
-
-  /**
-   * Retrieve public resources
-   *
-   * res String resource id
-   * id String organization id (optional)
-   * returns File
-   **/
-  static organizationIdPublicGet({ res, id }) {
-    return new Promise(
-      async (resolve) => {
-        try {
-          resolve(Service.successResponse(''));
-        } catch (e) {
-          resolve(Service.rejectResponse(
-            e.message || 'Invalid input',
-            e.status || 405,
-          ));
-        }
-      },
-    );
-  }
-
-  /**
-   * Update info on one organization
-   *
-   * id String The value of the unique id
-   * organization Organization  (optional)
+   * username String Username associated to the account
+   * domain String Domain associated to the account
    * no response value expected for this operation
    **/
-  static organizationIdPut({ id, organization }) {
+  static authPasswordResetGET({ username, domain }) {
     return new Promise(
       async (resolve) => {
         try {
@@ -135,38 +73,13 @@ class BackofficeService {
   }
 
   /**
-   * Get an organization resource
-   * Get an organization resource
+   * Reset your own password
+   * This API allows to reset your own password knowing the previous one with a logged user.
    *
-   * id String The value of the unique id
-   * resPath String 
-   * returns File
-   **/
-  static organizationIdResourceGET({ id, resPath }) {
-    return new Promise(
-      async (resolve) => {
-        try {
-          resolve(Service.successResponse(''));
-        } catch (e) {
-          resolve(Service.rejectResponse(
-            e.message || 'Invalid input',
-            e.status || 405,
-          ));
-        }
-      },
-    );
-  }
-
-  /**
-   * Create or overwrite an organization resource
-   * Create or overwrite an organization resource
-   *
-   * id String The value of the unique id
-   * resPath String 
-   * file File The file to upload.
+   * inlineObject4 InlineObject4 
    * no response value expected for this operation
    **/
-  static organizationIdResourcePUT({ id, resPath, file }) {
+  static authPasswordResetPOST({ inlineObject4 }) {
     return new Promise(
       async (resolve) => {
         try {
@@ -182,56 +95,12 @@ class BackofficeService {
   }
 
   /**
-   * Delete an organization resource
-   * Deletes a Resource.
-   *
-   * id String The value of the unique id
-   * resPath String 
-   * no response value expected for this operation
-   **/
-  static organizationResourceIdDelete({ id, resPath }) {
-    return new Promise(
-      async (resolve) => {
-        try {
-          resolve(Service.successResponse(''));
-        } catch (e) {
-          resolve(Service.rejectResponse(
-            e.message || 'Invalid input',
-            e.status || 405,
-          ));
-        }
-      },
-    );
-  }
-
-  /**
-   * List all the organization resources
-   * List all the organization resources.
-   *
-   * id String The value of the unique id
-   * returns List
-   **/
-  static organizationResourcesGet({ id }) {
-    return new Promise(
-      async (resolve) => {
-        try {
-          resolve(Service.successResponse(''));
-        } catch (e) {
-          resolve(Service.rejectResponse(
-            e.message || 'Invalid input',
-            e.status || 405,
-          ));
-        }
-      },
-    );
-  }
-
-  /**
-   * Retrieve organization tags
+   * Get token to change password
+   * This API allows to get a password token to use in order to change a password.
    *
    * returns List
    **/
-  static organizationTagsGet() {
+  static authPasswordTokenGET() {
     return new Promise(
       async (resolve) => {
         try {
@@ -247,37 +116,172 @@ class BackofficeService {
   }
 
   /**
-   * Get the list of organizations
-   * Get the list of organizations
+   * Register or Update a SAML user
+   * This API allows to register or Update a SAML user.
    *
-   * Dollartop Integer A number of results to return. Applied after **$skip**  (optional)
-   * Dollarskip Long An offset into the collection of results (optional)
-   * Dollarcount Boolean If true, the server includes the count of all the items in the response  (optional)
-   * Dollarfilter String A filter definition (eg. $filter=name == \"Milk\" or surname == \"Bread\") (optional)
-   * returns OrganizationsGetResponse
-   **/
-  static organizationsGet({ Dollartop, Dollarskip, Dollarcount, Dollarfilter }) {
-    return new Promise(
-      async (resolve) => {
-        try {
-          resolve(Service.successResponse(''));
-        } catch (e) {
-          resolve(Service.rejectResponse(
-            e.message || 'Invalid input',
-            e.status || 405,
-          ));
-        }
-      },
-    );
-  }
-
-  /**
-   * Create a new organization
-   *
-   * organization Organization  (optional)
+   * domain String SAML domain
+   * iDToken1 String The BASE64-encoded SAML Reply in JSON
+   * iDToken2 String The Hex-encoded HMAC-SHA256 of the decoded IDToken1
    * no response value expected for this operation
    **/
-  static organizationsPost({ organization }) {
+  static authSamlPOST({ domain, iDToken1, iDToken2 }) {
+    return new Promise(
+      async (resolve) => {
+        try {
+          resolve(Service.successResponse(''));
+        } catch (e) {
+          resolve(Service.rejectResponse(
+            e.message || 'Invalid input',
+            e.status || 405,
+          ));
+        }
+      },
+    );
+  }
+
+  /**
+   * Return the current logged in user
+   * This API allows to retrieve the current logged in user.
+   *
+   * returns User
+   **/
+  static authUser() {
+    return new Promise(
+      async (resolve) => {
+        try {
+          resolve(Service.successResponse(''));
+        } catch (e) {
+          resolve(Service.rejectResponse(
+            e.message || 'Invalid input',
+            e.status || 405,
+          ));
+        }
+      },
+    );
+  }
+
+  /**
+   * Retrieve the App configuration
+   * This API allows to get the public configuration associated to the application. 
+   *
+   * returns Map
+   **/
+  static configurationGet() {
+    return new Promise(
+      async (resolve) => {
+        try {
+          resolve(Service.successResponse(''));
+        } catch (e) {
+          resolve(Service.rejectResponse(
+            e.message || 'Invalid input',
+            e.status || 405,
+          ));
+        }
+      },
+    );
+  }
+
+  /**
+   * Log out current user terminating the session
+   * This API allows to Log out current user.
+   *
+   * no response value expected for this operation
+   **/
+  static logoutUser() {
+    return new Promise(
+      async (resolve) => {
+        try {
+          resolve(Service.successResponse(''));
+        } catch (e) {
+          resolve(Service.rejectResponse(
+            e.message || 'Invalid input',
+            e.status || 405,
+          ));
+        }
+      },
+    );
+  }
+
+  /**
+   * Get the bearer token
+   * This API allows to get the token needed to access other APIs through the OAuth2 authentication.
+   *
+   * username String The username in the form _username_@_domain_ where *domain* is the organization the user belongs to (optional)
+   * password String This is the actual password of the user (optional)
+   * grantUnderscoretype String A parameter that indicates the type of the grant in order to perform the basic authentication (optional)
+   * returns inline_response_200
+   **/
+  static oauthTokenPOST({ username, password, grantUnderscoretype }) {
+    return new Promise(
+      async (resolve) => {
+        try {
+          resolve(Service.successResponse(''));
+        } catch (e) {
+          resolve(Service.rejectResponse(
+            e.message || 'Invalid input',
+            e.status || 405,
+          ));
+        }
+      },
+    );
+  }
+
+  /**
+   * Retrieve a Resource (of service)
+   * This API allows to extract thumbnails from a PDF Resource.
+   *
+   * id UUID The value of _the unique id_
+   * page Integer The page to retrieve
+   * width Integer The output image width (optional)
+   * returns File
+   **/
+  static pdfResourceIdThumbsGET({ id, page, width }) {
+    return new Promise(
+      async (resolve) => {
+        try {
+          resolve(Service.successResponse(''));
+        } catch (e) {
+          resolve(Service.rejectResponse(
+            e.message || 'Invalid input',
+            e.status || 405,
+          ));
+        }
+      },
+    );
+  }
+
+  /**
+   * Change the password of a service user
+   * This API allows to change the password of a **service user**. 
+   *
+   * username String Username associated to the account
+   * domain String Domain associated to the account
+   * body String New password associated to the account (BCrypt)
+   * no response value expected for this operation
+   **/
+  static serviceChangePasswordPOST({ username, domain, body }) {
+    return new Promise(
+      async (resolve) => {
+        try {
+          resolve(Service.successResponse(''));
+        } catch (e) {
+          resolve(Service.rejectResponse(
+            e.message || 'Invalid input',
+            e.status || 405,
+          ));
+        }
+      },
+    );
+  }
+
+  /**
+   * Sync user accounts
+   * This API allows to sync user accounts.
+   *
+   * inlineObject List User Accounts
+   * returns UserSyncReport
+   **/
+  static serviceUsersSyncPOST({ inlineObject }) {
     return new Promise(
       async (resolve) => {
         try {
@@ -294,4 +298,4 @@ class BackofficeService {
 
 }
 
-module.exports = BackofficeService;
+module.exports = Bit4idPathgroupServicesService;

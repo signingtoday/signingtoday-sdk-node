@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 const Service = require('./Service');
 
-class DSTNoteService {
+class Bit4idPathgroupDSTNoteService {
 
   /**
    * Retrieve the DSTNotes associated to the DST
@@ -97,4 +97,4 @@ class DSTNoteService {
 
 }
 
-module.exports = DSTNoteService;
+module.exports = Bit4idPathgroupDSTNoteService;

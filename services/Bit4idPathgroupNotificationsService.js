@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 const Service = require('./Service');
 
-class NotificationsService {
+class Bit4idPathgroupNotificationsService {
 
   /**
    * Clear Notifications for a DST
@@ -95,4 +95,4 @@ class NotificationsService {
 
 }
 
-module.exports = NotificationsService;
+module.exports = Bit4idPathgroupNotificationsService;

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 const Service = require('./Service');
 
-class DigitalSignatureTransactionsService {
+class Bit4idPathgroupDigitalSignatureTransactionsService {
 
   /**
    * Retrieve the audit records associated to the DST
@@ -323,4 +323,4 @@ class DigitalSignatureTransactionsService {
 
 }
 
-module.exports = DigitalSignatureTransactionsService;
+module.exports = Bit4idPathgroupDigitalSignatureTransactionsService;

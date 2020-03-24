@@ -4,14 +4,14 @@ const Service = require('./Service');
 class Bit4idPathgroupUsersService {
 
   /**
-   * Create a user of the organization
-   * This API allows to create a new user of the organization. 
+   * Enable or disable a User
+   * This API allows to **enable** or **disable** a User account. 
    *
-   * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
-   * createUser CreateUser The new user object to create
-   * returns inline_response_201_5
+   * id UUID The value of _the unique id_
+   * enabled Boolean This is a _boolean_ parameter. If true the User is **enabled**  (optional)
+   * no response value expected for this operation
    **/
-  static create_user({ organizationId, createUser }) {
+  static userIdDELETE({ id, enabled }) {
     return new Promise(
       async (resolve) => {
         try {
@@ -27,14 +27,13 @@ class Bit4idPathgroupUsersService {
   }
 
   /**
-   * Get information about an user
-   * This API allows to get information about an user. 
+   * Retrieve a User
+   * This API allows to retrieve a User.
    *
-   * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
-   * userId id The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user 
-   * returns inline_response_201_5
+   * id UUID The value of _the unique id_
+   * returns User
    **/
-  static get_user({ organizationId, userId }) {
+  static userIdGET({ id }) {
     return new Promise(
       async (resolve) => {
         try {
@@ -50,19 +49,13 @@ class Bit4idPathgroupUsersService {
   }
 
   /**
-   * Enumerate the users of an organization
-   * This API allows to enumerate the users of an organization. 
+   * Retrieve User identities
+   * This API allows to retrieve user identities.
    *
-   * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
-   * whereUnderscoremembershipUnderscoreid String Returns the users that have the specified id (optional)
-   * whereUnderscoreemail String Returns the users that have the specified email (optional)
-   * whereUnderscorelastUnderscorename String Returns the users that have the specified last name (optional)
-   * whereUnderscorefirstUnderscorename String Returns the users that have the specified first name (optional)
-   * page Integer Restricts the search to the chosen page (optional)
-   * count Integer Sets the number of users per page to display (optional)
-   * returns inline_response_200_12
+   * id UUID The value of _the unique id_
+   * returns List
    **/
-  static list_users({ organizationId, whereUnderscoremembershipUnderscoreid, whereUnderscoreemail, whereUnderscorelastUnderscorename, whereUnderscorefirstUnderscorename, page, count }) {
+  static userIdIdentitiesGET({ id }) {
     return new Promise(
       async (resolve) => {
         try {
@@ -78,15 +71,133 @@ class Bit4idPathgroupUsersService {
   }
 
   /**
-   * Edit one or more user properties
-   * This API allows to edit one or more user properties. 
+   * Update a User
+   * This API allows to update a User.
    *
-   * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
-   * userId id The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user 
-   * updateUser UpdateUser User properties to be edited
-   * returns inline_response_201_5
+   * id UUID The value of _the unique id_
+   * user User User replacing current object.
+   * no response value expected for this operation
    **/
-  static update_user({ organizationId, userId, updateUser }) {
+  static userIdPUT({ id, user }) {
+    return new Promise(
+      async (resolve) => {
+        try {
+          resolve(Service.successResponse(''));
+        } catch (e) {
+          resolve(Service.rejectResponse(
+            e.message || 'Invalid input',
+            e.status || 405,
+          ));
+        }
+      },
+    );
+  }
+
+  /**
+   * Change the User role
+   * This API allows to change the permissions associated to the users, (**capabilities**) according to predefined user roles. 
+   *
+   * id UUID The value of _the unique id_
+   * newRole String The new **role** of the User. Allowed values are **admin**, **instructor**, **signer** 
+   * no response value expected for this operation
+   **/
+  static userIdRolePUT({ id, newRole }) {
+    return new Promise(
+      async (resolve) => {
+        try {
+          resolve(Service.successResponse(''));
+        } catch (e) {
+          resolve(Service.rejectResponse(
+            e.message || 'Invalid input',
+            e.status || 405,
+          ));
+        }
+      },
+    );
+  }
+
+  /**
+   * Retrieve Users
+   * This allows to get the list of the Users of an Organization.
+   *
+   * Dollartop Integer A number of results to return. Applied after **$skip**  (optional)
+   * Dollarskip Long An offset into the collection of results (optional)
+   * Dollarcount Boolean If true, the server includes the count of all the items in the response  (optional)
+   * DollarorderBy String An ordering definition (eg. $orderBy=updatedAt,desc) (optional)
+   * Dollarfilter String A filter definition (eg. $filter=name == \"Milk\" or surname == \"Bread\") (optional)
+   * returns UsersGetResponse
+   **/
+  static usersGET({ Dollartop, Dollarskip, Dollarcount, DollarorderBy, Dollarfilter }) {
+    return new Promise(
+      async (resolve) => {
+        try {
+          resolve(Service.successResponse(''));
+        } catch (e) {
+          resolve(Service.rejectResponse(
+            e.message || 'Invalid input',
+            e.status || 405,
+          ));
+        }
+      },
+    );
+  }
+
+  /**
+   * Retrieve UserGroups
+   * This API allows to get the list of the UserGroups.
+   *
+   * Dollartop Integer A number of results to return. Applied after **$skip**  (optional)
+   * Dollarskip Long An offset into the collection of results (optional)
+   * Dollarcount Boolean If true, the server includes the count of all the items in the response  (optional)
+   * DollarorderBy String An ordering definition (eg. $orderBy=updatedAt,desc) (optional)
+   * Dollarfilter String A filter definition (eg. $filter=name == \"Milk\" or surname == \"Bread\") (optional)
+   * returns UserGroupGetResponse
+   **/
+  static usersGroupsGET({ Dollartop, Dollarskip, Dollarcount, DollarorderBy, Dollarfilter }) {
+    return new Promise(
+      async (resolve) => {
+        try {
+          resolve(Service.successResponse(''));
+        } catch (e) {
+          resolve(Service.rejectResponse(
+            e.message || 'Invalid input',
+            e.status || 405,
+          ));
+        }
+      },
+    );
+  }
+
+  /**
+   * Create a new UserGroups
+   * This API allows to create a new UserGroups.
+   *
+   * userGroup List UserGroup list to be added.
+   * no response value expected for this operation
+   **/
+  static usersGroupsPOST({ userGroup }) {
+    return new Promise(
+      async (resolve) => {
+        try {
+          resolve(Service.successResponse(''));
+        } catch (e) {
+          resolve(Service.rejectResponse(
+            e.message || 'Invalid input',
+            e.status || 405,
+          ));
+        }
+      },
+    );
+  }
+
+  /**
+   * Create a new User
+   * This API allows to create a new User.
+   *
+   * createUserRequest CreateUserRequest 
+   * returns UUID
+   **/
+  static usersPOST({ createUserRequest }) {
     return new Promise(
       async (resolve) => {
         try {

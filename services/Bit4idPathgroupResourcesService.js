@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 const Service = require('./Service');
 
-class ResourcesService {
+class Bit4idPathgroupResourcesService {
 
   /**
    * Retrieve all resources associated to a DST
@@ -193,4 +193,4 @@ class ResourcesService {
 
 }
 
-module.exports = ResourcesService;
+module.exports = Bit4idPathgroupResourcesService;

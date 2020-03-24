@@ -5,20 +5,40 @@ class Bit4idPathgroupUsersController {
     this.service = Service;
   }
 
-  async create_user(request, response) {
-    await Controller.handleRequest(request, response, this.service.create_user);
+  async userIdDELETE(request, response) {
+    await Controller.handleRequest(request, response, this.service.userIdDELETE);
   }
 
-  async get_user(request, response) {
-    await Controller.handleRequest(request, response, this.service.get_user);
+  async userIdGET(request, response) {
+    await Controller.handleRequest(request, response, this.service.userIdGET);
   }
 
-  async list_users(request, response) {
-    await Controller.handleRequest(request, response, this.service.list_users);
+  async userIdIdentitiesGET(request, response) {
+    await Controller.handleRequest(request, response, this.service.userIdIdentitiesGET);
   }
 
-  async update_user(request, response) {
-    await Controller.handleRequest(request, response, this.service.update_user);
+  async userIdPUT(request, response) {
+    await Controller.handleRequest(request, response, this.service.userIdPUT);
+  }
+
+  async userIdRolePUT(request, response) {
+    await Controller.handleRequest(request, response, this.service.userIdRolePUT);
+  }
+
+  async usersGET(request, response) {
+    await Controller.handleRequest(request, response, this.service.usersGET);
+  }
+
+  async usersGroupsGET(request, response) {
+    await Controller.handleRequest(request, response, this.service.usersGroupsGET);
+  }
+
+  async usersGroupsPOST(request, response) {
+    await Controller.handleRequest(request, response, this.service.usersGroupsPOST);
+  }
+
+  async usersPOST(request, response) {
+    await Controller.handleRequest(request, response, this.service.usersPOST);
   }
 
 }
