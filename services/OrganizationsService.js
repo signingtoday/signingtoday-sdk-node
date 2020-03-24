@@ -5,7 +5,7 @@ class OrganizationsService {
 
   /**
    * Get the settings of an oraganization
-   * This API allows to obtain the settings of an organization, such as:   - _default_rao_ : the default rao user of the organization   - _dst_default_months_ : default deadline of a dst before its expiration   - _logo_ : the logo of the organization 
+   * This API allows to obtain the settings of an organization, such as:   - _default_rao_ : the default rao user of the organization   - _dst_default_days_ : default deadline of a dst before its expiration   - _logo_ : the logo of the organization 
    *
    * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
    * returns inline_response_200

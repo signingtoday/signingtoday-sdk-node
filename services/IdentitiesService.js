@@ -10,7 +10,7 @@ class IdentitiesService {
    * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
    * identityId id The **identity-id** is the uuid code that identifies an identity in the wallet of an user. It is, as well, used to restrict the requested operation to the scope of that identity 
    * inlineObject InlineObject 
-   * returns inline_response_200_4
+   * returns inline_response_201_1
    **/
   static associate_appearance({ organizationId, identityId, inlineObject }) {
     return new Promise(
@@ -34,7 +34,7 @@ class IdentitiesService {
    * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
    * userId id The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user 
    * identityAssociation IdentityAssociation Provider data to associate
-   * returns inline_response_200_4
+   * returns inline_response_201_1
    **/
   static associate_identity({ organizationId, userId, identityAssociation }) {
     return new Promise(
@@ -80,7 +80,7 @@ class IdentitiesService {
    *
    * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
    * identityId id The **identity-id** is the uuid code that identifies an identity in the wallet of an user. It is, as well, used to restrict the requested operation to the scope of that identity 
-   * returns inline_response_200_4
+   * returns inline_response_201_1
    **/
   static delete_appearance({ organizationId, identityId }) {
     return new Promise(
@@ -126,7 +126,7 @@ class IdentitiesService {
    *
    * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
    * identityId id The **identity-id** is the uuid code that identifies an identity in the wallet of an user. It is, as well, used to restrict the requested operation to the scope of that identity 
-   * returns inline_response_200_3
+   * returns inline_response_200_6
    **/
   static delete_identity({ organizationId, identityId }) {
     return new Promise(
@@ -149,7 +149,7 @@ class IdentitiesService {
    *
    * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
    * enrollmentId id The **enrollment-id** is the uuid code that identifies a specific enrollment request 
-   * returns inline_response_201_1
+   * returns inline_response_200_7
    **/
   static get_enrollment_request({ organizationId, enrollmentId }) {
     return new Promise(
@@ -172,9 +172,10 @@ class IdentitiesService {
    *
    * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
    * identityId id The **identity-id** is the uuid code that identifies an identity in the wallet of an user. It is, as well, used to restrict the requested operation to the scope of that identity 
-   * returns inline_response_200_2
+   * whereUnderscoreorder String The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \"**-**\" in front of the value indicates descending order), then the second value and so on (optional)
+   * returns inline_response_200_5
    **/
-  static get_identity({ organizationId, identityId }) {
+  static get_identity({ organizationId, identityId, whereUnderscoreorder }) {
     return new Promise(
       async (resolve) => {
         try {
@@ -202,9 +203,10 @@ class IdentitiesService {
    * whereUnderscorefiscalUnderscorecode String Returns the identity requests have the specified fiscal code (optional)
    * page Integer Restricts the search to the chosen page (optional)
    * count Integer Sets the number of users per page to display (optional)
-   * returns inline_response_200_5
+   * whereUnderscoreorder String The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \"**-**\" in front of the value indicates descending order), then the second value and so on (optional)
+   * returns inline_response_200_3
    **/
-  static list_enrollment_requests({ organizationId, whereUnderscoreprovider, whereUnderscoreuser, whereUnderscorefirstUnderscorename, whereUnderscorelastUnderscorename, whereUnderscoreregisteredUnderscoreby, whereUnderscorefiscalUnderscorecode, page, count }) {
+  static list_enrollment_requests({ organizationId, whereUnderscoreprovider, whereUnderscoreuser, whereUnderscorefirstUnderscorename, whereUnderscorelastUnderscorename, whereUnderscoreregisteredUnderscoreby, whereUnderscorefiscalUnderscorecode, page, count, whereUnderscoreorder }) {
     return new Promise(
       async (resolve) => {
         try {
@@ -232,9 +234,10 @@ class IdentitiesService {
    * whereUnderscorefiscalUnderscorecode String Returns the identities that have the specified fiscal code (optional)
    * page Integer Restricts the search to the chosen page (optional)
    * count Integer Sets the number of users per page to display (optional)
-   * returns inline_response_200_1
+   * whereUnderscoreorder String The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \"**-**\" in front of the value indicates descending order), then the second value and so on (optional)
+   * returns inline_response_200_2
    **/
-  static list_identities({ organizationId, whereUnderscoreprovider, whereUnderscoreuser, whereUnderscorefirstUnderscorename, whereUnderscorelastUnderscorename, whereUnderscoreregisteredUnderscoreby, whereUnderscorefiscalUnderscorecode, page, count }) {
+  static list_identities({ organizationId, whereUnderscoreprovider, whereUnderscoreuser, whereUnderscorefirstUnderscorename, whereUnderscorelastUnderscorename, whereUnderscoreregisteredUnderscoreby, whereUnderscorefiscalUnderscorecode, page, count, whereUnderscoreorder }) {
     return new Promise(
       async (resolve) => {
         try {
@@ -257,9 +260,10 @@ class IdentitiesService {
    * userId id The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user 
    * page Integer Restricts the search to the chosen page (optional)
    * count Integer Sets the number of users per page to display (optional)
-   * returns inline_response_200_5
+   * whereUnderscoreorder String The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \"**-**\" in front of the value indicates descending order), then the second value and so on (optional)
+   * returns inline_response_200_3
    **/
-  static list_user_enrollments({ organizationId, userId, page, count }) {
+  static list_user_enrollments({ organizationId, userId, page, count, whereUnderscoreorder }) {
     return new Promise(
       async (resolve) => {
         try {
@@ -282,9 +286,34 @@ class IdentitiesService {
    * userId id The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user 
    * page Integer Restricts the search to the chosen page (optional)
    * count Integer Sets the number of users per page to display (optional)
-   * returns inline_response_200_1
+   * whereUnderscoreorder String The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \"**-**\" in front of the value indicates descending order), then the second value and so on (optional)
+   * returns inline_response_200_2
    **/
-  static list_user_identities({ organizationId, userId, page, count }) {
+  static list_user_identities({ organizationId, userId, page, count, whereUnderscoreorder }) {
+    return new Promise(
+      async (resolve) => {
+        try {
+          resolve(Service.successResponse(''));
+        } catch (e) {
+          resolve(Service.rejectResponse(
+            e.message || 'Invalid input',
+            e.status || 405,
+          ));
+        }
+      },
+    );
+  }
+
+  /**
+   * Renew an Identity
+   * This API allows to renew an Identity of a user. 
+   *
+   * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
+   * enrollmentId id The **enrollment-id** is the uuid code that identifies a specific enrollment request 
+   * inlineObject1 InlineObject1 
+   * returns inline_response_200_7
+   **/
+  static renew_identity({ organizationId, enrollmentId, inlineObject1 }) {
     return new Promise(
       async (resolve) => {
         try {
@@ -305,7 +334,7 @@ class IdentitiesService {
    *
    * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
    * identityRequest IdentityRequest The enrollment request to submit
-   * returns inline_response_201_1
+   * returns inline_response_200_7
    **/
   static request_enrollment({ organizationId, identityRequest }) {
     return new Promise(

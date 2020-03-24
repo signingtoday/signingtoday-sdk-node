@@ -9,7 +9,7 @@ class Bit4idPathgroupTokensService {
    *
    * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
    * createToken CreateToken Token data
-   * returns inline_response_201_4
+   * returns inline_response_201_5
    **/
   static create_token({ organizationId, createToken }) {
     return new Promise(
@@ -55,7 +55,7 @@ class Bit4idPathgroupTokensService {
    *
    * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
    * tokenId id The **token-id** is the uuid code that identifies a token. It is, as well, used to restrict the requested operation to the scope of that token 
-   * returns inline_response_201_4
+   * returns inline_response_201_5
    **/
   static get_token({ organizationId, tokenId }) {
     return new Promise(
@@ -81,9 +81,10 @@ class Bit4idPathgroupTokensService {
    * whereUnderscorelabel String Returns the tokens with the specified label (optional)
    * count Integer Sets the number of tokens per page to display (optional)
    * page Integer Restricts the search to chosen page (optional)
-   * returns inline_response_200_11
+   * whereUnderscoreorder String The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \"**-**\" in front of the value indicates descending order), then the second value and so on (optional)
+   * returns inline_response_200_4
    **/
-  static list_tokens({ organizationId, whereUnderscoreuser, whereUnderscorelabel, count, page }) {
+  static list_tokens({ organizationId, whereUnderscoreuser, whereUnderscorelabel, count, page, whereUnderscoreorder }) {
     return new Promise(
       async (resolve) => {
         try {
@@ -106,9 +107,10 @@ class Bit4idPathgroupTokensService {
    * userId id The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user 
    * page Integer Restricts the search to the chosen page (optional)
    * count Integer Sets the number of users per page to display (optional)
-   * returns inline_response_200_11
+   * whereUnderscoreorder String The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \"**-**\" in front of the value indicates descending order), then the second value and so on (optional)
+   * returns inline_response_200_4
    **/
-  static list_user_tokens({ organizationId, userId, page, count }) {
+  static list_user_tokens({ organizationId, userId, page, count, whereUnderscoreorder }) {
     return new Promise(
       async (resolve) => {
         try {
@@ -130,7 +132,7 @@ class Bit4idPathgroupTokensService {
    * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
    * tokenId id The **token-id** is the uuid code that identifies a token. It is, as well, used to restrict the requested operation to the scope of that token 
    * updateToken UpdateToken Token data
-   * returns inline_response_201_4
+   * returns inline_response_201_5
    **/
   static update_token({ organizationId, tokenId, updateToken }) {
     return new Promise(

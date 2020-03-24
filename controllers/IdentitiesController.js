@@ -53,6 +53,10 @@ class IdentitiesController {
     await Controller.handleRequest(request, response, this.service.list_user_identities);
   }
 
+  async renew_identity(request, response) {
+    await Controller.handleRequest(request, response, this.service.renew_identity);
+  }
+
   async request_enrollment(request, response) {
     await Controller.handleRequest(request, response, this.service.request_enrollment);
   }

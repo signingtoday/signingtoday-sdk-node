@@ -17,6 +17,10 @@ class Bit4idPathgroupSignatureTransactionsController {
     await Controller.handleRequest(request, response, this.service.delete_DST);
   }
 
+  async delete_DST_resources(request, response) {
+    await Controller.handleRequest(request, response, this.service.delete_DST_resources);
+  }
+
   async get_DST(request, response) {
     await Controller.handleRequest(request, response, this.service.get_DST);
   }

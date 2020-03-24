@@ -9,7 +9,7 @@ class Bit4idPathgroupSignaturesService {
    *
    * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
    * dstId id The **dst-id** is the uuid code that identifies a digital signature transaction. It is used as a path parameter to filter the requested operation to the specified **dst** 
-   * returns inline_response_201
+   * returns inline_response_201_4
    **/
   static create_channel({ organizationId, dstId }) {
     return new Promise(
@@ -32,10 +32,10 @@ class Bit4idPathgroupSignaturesService {
    *
    * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
    * signatureId id The **signature-id** is the uuid code that identifies a signature that has to be performed into a digital signature transaction. It is usually used in the API endpoints to perform, decline or cancel a digital signature transaction 
-   * inlineObject2 InlineObject2 
+   * inlineObject5 InlineObject5 
    * returns inline_response_201_3
    **/
-  static decline_DST({ organizationId, signatureId, inlineObject2 }) {
+  static decline_DST({ organizationId, signatureId, inlineObject5 }) {
     return new Promise(
       async (resolve) => {
         try {
@@ -57,7 +57,7 @@ class Bit4idPathgroupSignaturesService {
    * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
    * signatureId id The **signature-id** is the uuid code that identifies a signature that has to be performed into a digital signature transaction. It is usually used in the API endpoints to perform, decline or cancel a digital signature transaction 
    * automaticSignature AutomaticSignature Automatic Signature description
-   * returns inline_response_200_8
+   * returns inline_response_200_11
    **/
   static perform_DST({ organizationId, signatureId, automaticSignature }) {
     return new Promise(
@@ -82,7 +82,7 @@ class Bit4idPathgroupSignaturesService {
    * signatureId id The **signature-id** is the uuid code that identifies a signature that has to be performed into a digital signature transaction. It is usually used in the API endpoints to perform, decline or cancel a digital signature transaction 
    * identityId id The **identity-id** is the uuid code that identifies an identity in the wallet of an user. It is, as well, used to restrict the requested operation to the scope of that identity 
    * inlineObject3 InlineObject3 
-   * returns inline_response_200_9
+   * returns inline_response_200_12
    **/
   static perform_signature({ organizationId, signatureId, identityId, inlineObject3 }) {
     return new Promise(
@@ -106,7 +106,7 @@ class Bit4idPathgroupSignaturesService {
    * organizationId String The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization 
    * signatureId id The **signature-id** is the uuid code that identifies a signature that has to be performed into a digital signature transaction. It is usually used in the API endpoints to perform, decline or cancel a digital signature transaction 
    * inlineObject4 InlineObject4 
-   * returns inline_response_200_10
+   * returns inline_response_200_13
    **/
   static perform_signature_with_session({ organizationId, signatureId, inlineObject4 }) {
     return new Promise(
