@@ -277,6 +277,13 @@ info:
     - **identity-label**: the label assigned to the identity
     - **identity-certificate**: public key of the certificate
 
+    ## SUPPORTED Provider
+
+    The supported providers are:
+      - *_aruba_*
+      - *infocert*
+      - *namirial*
+      - *uanataca*
 
   termsOfService: https://signing.today/privacy-policy/
   title: Signing Today API
@@ -3589,7 +3596,7 @@ components:
           description: |
             Identity status which can be one of the following. When
             an identity request is send, the identity is created and the
-            status is **pending** until the provider dont'approve the request.
+            status is **pending** until the provider dont approve the request.
             Then status of the identity changes to **active**. If for some reason
             an error occurs during the process, or after that, the status will
             be **error**
@@ -3901,8 +3908,38 @@ components:
         constraints: {}
         urlback: https://signing.today/sample/home
         where:
+          image_uri: https://signing.today/sample/signature_appearance
           page: 1
           position: 'rect: 50, 100, 200, 150'
+          text:
+          - format:
+            - Firmato con SigningToday
+            - da {subject[commonName]}
+            - '{subject[C]}'
+            - '{subject[L]}'
+            - '{subject[S]}'
+            - '{subject[OU]}'
+            - '{subject[O]}'
+            - '{subject[E]}'
+            - in data {date:%d-%m-%Y %H:%M:%S}
+            align: middle
+            font:
+              size: 50.0
+              name: Universal
+          - format:
+            - Firmato con SigningToday
+            - da {subject[commonName]}
+            - '{subject[C]}'
+            - '{subject[L]}'
+            - '{subject[S]}'
+            - '{subject[OU]}'
+            - '{subject[O]}'
+            - '{subject[E]}'
+            - in data {date:%d-%m-%Y %H:%M:%S}
+            align: middle
+            font:
+              size: 50.0
+              name: Universal
         id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
         description_html: <i>my-description</i>
         signer: jdo
@@ -4040,8 +4077,38 @@ components:
               constraints: {}
               urlback: https://signing.today/sample/home
               where:
+                image_uri: https://signing.today/sample/signature_appearance
                 page: 1
                 position: 'rect: 50, 100, 200, 150'
+                text:
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
               id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
               description_html: <i>my-description</i>
               signer: jdo
@@ -4058,8 +4125,38 @@ components:
               constraints: {}
               urlback: https://signing.today/sample/home
               where:
+                image_uri: https://signing.today/sample/signature_appearance
                 page: 1
                 position: 'rect: 50, 100, 200, 150'
+                text:
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
               id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
               description_html: <i>my-description</i>
               signer: jdo
@@ -4076,8 +4173,38 @@ components:
               constraints: {}
               urlback: https://signing.today/sample/home
               where:
+                image_uri: https://signing.today/sample/signature_appearance
                 page: 1
                 position: 'rect: 50, 100, 200, 150'
+                text:
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
               id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
               description_html: <i>my-description</i>
               signer: jdo
@@ -4094,8 +4221,38 @@ components:
               constraints: {}
               urlback: https://signing.today/sample/home
               where:
+                image_uri: https://signing.today/sample/signature_appearance
                 page: 1
                 position: 'rect: 50, 100, 200, 150'
+                text:
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
               id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
               description_html: <i>my-description</i>
               signer: jdo
@@ -4121,8 +4278,38 @@ components:
               constraints: {}
               urlback: https://signing.today/sample/home
               where:
+                image_uri: https://signing.today/sample/signature_appearance
                 page: 1
                 position: 'rect: 50, 100, 200, 150'
+                text:
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
               id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
               description_html: <i>my-description</i>
               signer: jdo
@@ -4139,8 +4326,38 @@ components:
               constraints: {}
               urlback: https://signing.today/sample/home
               where:
+                image_uri: https://signing.today/sample/signature_appearance
                 page: 1
                 position: 'rect: 50, 100, 200, 150'
+                text:
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
               id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
               description_html: <i>my-description</i>
               signer: jdo
@@ -4157,8 +4374,38 @@ components:
               constraints: {}
               urlback: https://signing.today/sample/home
               where:
+                image_uri: https://signing.today/sample/signature_appearance
                 page: 1
                 position: 'rect: 50, 100, 200, 150'
+                text:
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
               id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
               description_html: <i>my-description</i>
               signer: jdo
@@ -4175,8 +4422,38 @@ components:
               constraints: {}
               urlback: https://signing.today/sample/home
               where:
+                image_uri: https://signing.today/sample/signature_appearance
                 page: 1
                 position: 'rect: 50, 100, 200, 150'
+                text:
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
               id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
               description_html: <i>my-description</i>
               signer: jdo
@@ -4294,8 +4571,38 @@ components:
               urlback: https://signing.today/sample/home
               description: '*my-description*'
               where:
+                image_uri: https://signing.today/sample/signature_appearance
                 page: 1
                 position: 'rect: 50, 100, 200, 150'
+                text:
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
               display_name: John
               constraints: {}
               signer: jdo
@@ -4305,8 +4612,38 @@ components:
               urlback: https://signing.today/sample/home
               description: '*my-description*'
               where:
+                image_uri: https://signing.today/sample/signature_appearance
                 page: 1
                 position: 'rect: 50, 100, 200, 150'
+                text:
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
               display_name: John
               constraints: {}
               signer: jdo
@@ -4316,8 +4653,38 @@ components:
               urlback: https://signing.today/sample/home
               description: '*my-description*'
               where:
+                image_uri: https://signing.today/sample/signature_appearance
                 page: 1
                 position: 'rect: 50, 100, 200, 150'
+                text:
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
               display_name: John
               constraints: {}
               signer: jdo
@@ -4327,8 +4694,38 @@ components:
               urlback: https://signing.today/sample/home
               description: '*my-description*'
               where:
+                image_uri: https://signing.today/sample/signature_appearance
                 page: 1
                 position: 'rect: 50, 100, 200, 150'
+                text:
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
               display_name: John
               constraints: {}
               signer: jdo
@@ -4341,8 +4738,38 @@ components:
               urlback: https://signing.today/sample/home
               description: '*my-description*'
               where:
+                image_uri: https://signing.today/sample/signature_appearance
                 page: 1
                 position: 'rect: 50, 100, 200, 150'
+                text:
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
               display_name: John
               constraints: {}
               signer: jdo
@@ -4352,8 +4779,38 @@ components:
               urlback: https://signing.today/sample/home
               description: '*my-description*'
               where:
+                image_uri: https://signing.today/sample/signature_appearance
                 page: 1
                 position: 'rect: 50, 100, 200, 150'
+                text:
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
               display_name: John
               constraints: {}
               signer: jdo
@@ -4363,8 +4820,38 @@ components:
               urlback: https://signing.today/sample/home
               description: '*my-description*'
               where:
+                image_uri: https://signing.today/sample/signature_appearance
                 page: 1
                 position: 'rect: 50, 100, 200, 150'
+                text:
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
               display_name: John
               constraints: {}
               signer: jdo
@@ -4374,8 +4861,38 @@ components:
               urlback: https://signing.today/sample/home
               description: '*my-description*'
               where:
+                image_uri: https://signing.today/sample/signature_appearance
                 page: 1
                 position: 'rect: 50, 100, 200, 150'
+                text:
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
+                - format:
+                  - Firmato con SigningToday
+                  - da {subject[commonName]}
+                  - '{subject[C]}'
+                  - '{subject[L]}'
+                  - '{subject[S]}'
+                  - '{subject[OU]}'
+                  - '{subject[O]}'
+                  - '{subject[E]}'
+                  - in data {date:%d-%m-%Y %H:%M:%S}
+                  align: middle
+                  font:
+                    size: 50.0
+                    name: Universal
               display_name: John
               constraints: {}
               signer: jdo
@@ -4404,8 +4921,38 @@ components:
         urlback: https://signing.today/sample/home
         description: '*my-description*'
         where:
+          image_uri: https://signing.today/sample/signature_appearance
           page: 1
           position: 'rect: 50, 100, 200, 150'
+          text:
+          - format:
+            - Firmato con SigningToday
+            - da {subject[commonName]}
+            - '{subject[C]}'
+            - '{subject[L]}'
+            - '{subject[S]}'
+            - '{subject[OU]}'
+            - '{subject[O]}'
+            - '{subject[E]}'
+            - in data {date:%d-%m-%Y %H:%M:%S}
+            align: middle
+            font:
+              size: 50.0
+              name: Universal
+          - format:
+            - Firmato con SigningToday
+            - da {subject[commonName]}
+            - '{subject[C]}'
+            - '{subject[L]}'
+            - '{subject[S]}'
+            - '{subject[OU]}'
+            - '{subject[O]}'
+            - '{subject[E]}'
+            - in data {date:%d-%m-%Y %H:%M:%S}
+            align: middle
+            font:
+              size: 50.0
+              name: Universal
         display_name: John
         constraints: {}
         signer: jdo
@@ -5385,8 +5932,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5403,8 +5980,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5421,8 +6028,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5439,8 +6076,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5466,8 +6133,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5484,8 +6181,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5502,8 +6229,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5520,8 +6277,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5559,8 +6346,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5577,8 +6394,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5595,8 +6442,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5613,8 +6490,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5640,8 +6547,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5658,8 +6595,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5676,8 +6643,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5694,8 +6691,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5747,8 +6774,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5765,8 +6822,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5783,8 +6870,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5801,8 +6918,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5828,8 +6975,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5846,8 +7023,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5864,8 +7071,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5882,8 +7119,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5961,8 +7228,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5979,8 +7276,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -5997,8 +7324,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -6015,8 +7372,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -6042,8 +7429,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -6060,8 +7477,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -6078,8 +7525,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -6096,8 +7573,38 @@ components:
                 constraints: {}
                 urlback: https://signing.today/sample/home
                 where:
+                  image_uri: https://signing.today/sample/signature_appearance
                   page: 1
                   position: 'rect: 50, 100, 200, 150'
+                  text:
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
+                  - format:
+                    - Firmato con SigningToday
+                    - da {subject[commonName]}
+                    - '{subject[C]}'
+                    - '{subject[L]}'
+                    - '{subject[S]}'
+                    - '{subject[OU]}'
+                    - '{subject[O]}'
+                    - '{subject[E]}'
+                    - in data {date:%d-%m-%Y %H:%M:%S}
+                    align: middle
+                    font:
+                      size: 50.0
+                      name: Universal
                 id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
                 description_html: <i>my-description</i>
                 signer: jdo
@@ -6324,12 +7831,94 @@ components:
           example: https://signing.today/sample/sign-document
           format: url
           type: string
+    Signature_where_font:
+      example:
+        size: 50.0
+        name: Universal
+      properties:
+        name:
+          example: Universal
+          type: string
+        size:
+          example: 50.0
+          format: float
+          type: number
+    Signature_where_text:
+      example:
+        format:
+        - Firmato con SigningToday
+        - da {subject[commonName]}
+        - '{subject[C]}'
+        - '{subject[L]}'
+        - '{subject[S]}'
+        - '{subject[OU]}'
+        - '{subject[O]}'
+        - '{subject[E]}'
+        - in data {date:%d-%m-%Y %H:%M:%S}
+        align: middle
+        font:
+          size: 50.0
+          name: Universal
+      properties:
+        font:
+          $ref: '#/components/schemas/Signature_where_font'
+        align:
+          enum:
+          - left
+          - right
+          - middle
+          example: middle
+          type: string
+        format:
+          example:
+          - Firmato con SigningToday
+          - da {subject[commonName]}
+          - '{subject[C]}'
+          - '{subject[L]}'
+          - '{subject[S]}'
+          - '{subject[OU]}'
+          - '{subject[O]}'
+          - '{subject[E]}'
+          - in data {date:%d-%m-%Y %H:%M:%S}
+          items:
+            type: string
+          type: array
     Signature_where:
       description: |
         Where will be allocated the Signature on the document. This field is made of two parameters, defined as follows
       example:
+        image_uri: https://signing.today/sample/signature_appearance
         page: 1
         position: 'rect: 50, 100, 200, 150'
+        text:
+        - format:
+          - Firmato con SigningToday
+          - da {subject[commonName]}
+          - '{subject[C]}'
+          - '{subject[L]}'
+          - '{subject[S]}'
+          - '{subject[OU]}'
+          - '{subject[O]}'
+          - '{subject[E]}'
+          - in data {date:%d-%m-%Y %H:%M:%S}
+          align: middle
+          font:
+            size: 50.0
+            name: Universal
+        - format:
+          - Firmato con SigningToday
+          - da {subject[commonName]}
+          - '{subject[C]}'
+          - '{subject[L]}'
+          - '{subject[S]}'
+          - '{subject[OU]}'
+          - '{subject[O]}'
+          - '{subject[E]}'
+          - in data {date:%d-%m-%Y %H:%M:%S}
+          align: middle
+          font:
+            size: 50.0
+            name: Universal
       properties:
         page:
           description: As can be guessed this is the page where to allocate the Signature
@@ -6342,6 +7931,35 @@ components:
           example: 'rect: 50, 100, 200, 150'
           format: any
           type: string
+        image_uri:
+          description: |
+            If provided this current image will be used for the signature, as a graphic appearance. This overrides the appearance definited in the Identity, which still will be the default one. If no signature appearance is provided in the Identity than will be used the default one of the Organization. If you choose to avoi the signature appearance than use this field as follows: _image_uri_: null
+          example: https://signing.today/sample/signature_appearance
+          format: url
+          type: string
+        text:
+          description: |
+            The text field will be filled with a list of paragraphs that will be displayed next to the graphic signature. Each paragraph may have its own font type, font dimension, line-up and a list of rows (strings) which will compose the paragraph. It is possible to specify some _placeholders_ as well. The paragraph objects will use default font and line-up if none was specified. If no **format** field is specified than will be used the default one:
+              "format": [
+                "Signed by {subject[commonName]}",
+                "{subject[C]}",
+                "{subject[L]}",
+                "{subject[S]}",
+                "{subject[OU]}",
+                "{subject[O]}",
+                "{subject[E]}"
+              ]
+            Where {subject[...]} is a placeholder which will be filled with the certificate attirbutes. Follows the list of the placeholders:
+              - commonName: CommonName
+              - OU: OrganizationalUnit
+              - O: Organization
+              - L: Locality
+              - S: StateOrProvinceName
+              - C: CountryName
+          format: array
+          items:
+            $ref: '#/components/schemas/Signature_where_text'
+          type: array
     document:
       example:
         preview: /pdfr/737dc132-a3f0-11e9-a2a3-2a2ae2dbcce4/0/{page}.png?w={width}&h={height}
@@ -6359,8 +7977,38 @@ components:
             constraints: {}
             urlback: https://signing.today/sample/home
             where:
+              image_uri: https://signing.today/sample/signature_appearance
               page: 1
               position: 'rect: 50, 100, 200, 150'
+              text:
+              - format:
+                - Firmato con SigningToday
+                - da {subject[commonName]}
+                - '{subject[C]}'
+                - '{subject[L]}'
+                - '{subject[S]}'
+                - '{subject[OU]}'
+                - '{subject[O]}'
+                - '{subject[E]}'
+                - in data {date:%d-%m-%Y %H:%M:%S}
+                align: middle
+                font:
+                  size: 50.0
+                  name: Universal
+              - format:
+                - Firmato con SigningToday
+                - da {subject[commonName]}
+                - '{subject[C]}'
+                - '{subject[L]}'
+                - '{subject[S]}'
+                - '{subject[OU]}'
+                - '{subject[O]}'
+                - '{subject[E]}'
+                - in data {date:%d-%m-%Y %H:%M:%S}
+                align: middle
+                font:
+                  size: 50.0
+                  name: Universal
             id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
             description_html: <i>my-description</i>
             signer: jdo
@@ -6377,8 +8025,38 @@ components:
             constraints: {}
             urlback: https://signing.today/sample/home
             where:
+              image_uri: https://signing.today/sample/signature_appearance
               page: 1
               position: 'rect: 50, 100, 200, 150'
+              text:
+              - format:
+                - Firmato con SigningToday
+                - da {subject[commonName]}
+                - '{subject[C]}'
+                - '{subject[L]}'
+                - '{subject[S]}'
+                - '{subject[OU]}'
+                - '{subject[O]}'
+                - '{subject[E]}'
+                - in data {date:%d-%m-%Y %H:%M:%S}
+                align: middle
+                font:
+                  size: 50.0
+                  name: Universal
+              - format:
+                - Firmato con SigningToday
+                - da {subject[commonName]}
+                - '{subject[C]}'
+                - '{subject[L]}'
+                - '{subject[S]}'
+                - '{subject[OU]}'
+                - '{subject[O]}'
+                - '{subject[E]}'
+                - in data {date:%d-%m-%Y %H:%M:%S}
+                align: middle
+                font:
+                  size: 50.0
+                  name: Universal
             id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
             description_html: <i>my-description</i>
             signer: jdo
@@ -6395,8 +8073,38 @@ components:
             constraints: {}
             urlback: https://signing.today/sample/home
             where:
+              image_uri: https://signing.today/sample/signature_appearance
               page: 1
               position: 'rect: 50, 100, 200, 150'
+              text:
+              - format:
+                - Firmato con SigningToday
+                - da {subject[commonName]}
+                - '{subject[C]}'
+                - '{subject[L]}'
+                - '{subject[S]}'
+                - '{subject[OU]}'
+                - '{subject[O]}'
+                - '{subject[E]}'
+                - in data {date:%d-%m-%Y %H:%M:%S}
+                align: middle
+                font:
+                  size: 50.0
+                  name: Universal
+              - format:
+                - Firmato con SigningToday
+                - da {subject[commonName]}
+                - '{subject[C]}'
+                - '{subject[L]}'
+                - '{subject[S]}'
+                - '{subject[OU]}'
+                - '{subject[O]}'
+                - '{subject[E]}'
+                - in data {date:%d-%m-%Y %H:%M:%S}
+                align: middle
+                font:
+                  size: 50.0
+                  name: Universal
             id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
             description_html: <i>my-description</i>
             signer: jdo
@@ -6413,8 +8121,38 @@ components:
             constraints: {}
             urlback: https://signing.today/sample/home
             where:
+              image_uri: https://signing.today/sample/signature_appearance
               page: 1
               position: 'rect: 50, 100, 200, 150'
+              text:
+              - format:
+                - Firmato con SigningToday
+                - da {subject[commonName]}
+                - '{subject[C]}'
+                - '{subject[L]}'
+                - '{subject[S]}'
+                - '{subject[OU]}'
+                - '{subject[O]}'
+                - '{subject[E]}'
+                - in data {date:%d-%m-%Y %H:%M:%S}
+                align: middle
+                font:
+                  size: 50.0
+                  name: Universal
+              - format:
+                - Firmato con SigningToday
+                - da {subject[commonName]}
+                - '{subject[C]}'
+                - '{subject[L]}'
+                - '{subject[S]}'
+                - '{subject[OU]}'
+                - '{subject[O]}'
+                - '{subject[E]}'
+                - in data {date:%d-%m-%Y %H:%M:%S}
+                align: middle
+                font:
+                  size: 50.0
+                  name: Universal
             id: 787dc132-b3f0-11e9-a1a3-2a2ae2dbcce5
             description_html: <i>my-description</i>
             signer: jdo
@@ -6480,8 +8218,38 @@ components:
             urlback: https://signing.today/sample/home
             description: '*my-description*'
             where:
+              image_uri: https://signing.today/sample/signature_appearance
               page: 1
               position: 'rect: 50, 100, 200, 150'
+              text:
+              - format:
+                - Firmato con SigningToday
+                - da {subject[commonName]}
+                - '{subject[C]}'
+                - '{subject[L]}'
+                - '{subject[S]}'
+                - '{subject[OU]}'
+                - '{subject[O]}'
+                - '{subject[E]}'
+                - in data {date:%d-%m-%Y %H:%M:%S}
+                align: middle
+                font:
+                  size: 50.0
+                  name: Universal
+              - format:
+                - Firmato con SigningToday
+                - da {subject[commonName]}
+                - '{subject[C]}'
+                - '{subject[L]}'
+                - '{subject[S]}'
+                - '{subject[OU]}'
+                - '{subject[O]}'
+                - '{subject[E]}'
+                - in data {date:%d-%m-%Y %H:%M:%S}
+                align: middle
+                font:
+                  size: 50.0
+                  name: Universal
             display_name: John
             constraints: {}
             signer: jdo
@@ -6491,8 +8259,38 @@ components:
             urlback: https://signing.today/sample/home
             description: '*my-description*'
             where:
+              image_uri: https://signing.today/sample/signature_appearance
               page: 1
               position: 'rect: 50, 100, 200, 150'
+              text:
+              - format:
+                - Firmato con SigningToday
+                - da {subject[commonName]}
+                - '{subject[C]}'
+                - '{subject[L]}'
+                - '{subject[S]}'
+                - '{subject[OU]}'
+                - '{subject[O]}'
+                - '{subject[E]}'
+                - in data {date:%d-%m-%Y %H:%M:%S}
+                align: middle
+                font:
+                  size: 50.0
+                  name: Universal
+              - format:
+                - Firmato con SigningToday
+                - da {subject[commonName]}
+                - '{subject[C]}'
+                - '{subject[L]}'
+                - '{subject[S]}'
+                - '{subject[OU]}'
+                - '{subject[O]}'
+                - '{subject[E]}'
+                - in data {date:%d-%m-%Y %H:%M:%S}
+                align: middle
+                font:
+                  size: 50.0
+                  name: Universal
             display_name: John
             constraints: {}
             signer: jdo
@@ -6502,8 +8300,38 @@ components:
             urlback: https://signing.today/sample/home
             description: '*my-description*'
             where:
+              image_uri: https://signing.today/sample/signature_appearance
               page: 1
               position: 'rect: 50, 100, 200, 150'
+              text:
+              - format:
+                - Firmato con SigningToday
+                - da {subject[commonName]}
+                - '{subject[C]}'
+                - '{subject[L]}'
+                - '{subject[S]}'
+                - '{subject[OU]}'
+                - '{subject[O]}'
+                - '{subject[E]}'
+                - in data {date:%d-%m-%Y %H:%M:%S}
+                align: middle
+                font:
+                  size: 50.0
+                  name: Universal
+              - format:
+                - Firmato con SigningToday
+                - da {subject[commonName]}
+                - '{subject[C]}'
+                - '{subject[L]}'
+                - '{subject[S]}'
+                - '{subject[OU]}'
+                - '{subject[O]}'
+                - '{subject[E]}'
+                - in data {date:%d-%m-%Y %H:%M:%S}
+                align: middle
+                font:
+                  size: 50.0
+                  name: Universal
             display_name: John
             constraints: {}
             signer: jdo
@@ -6513,8 +8341,38 @@ components:
             urlback: https://signing.today/sample/home
             description: '*my-description*'
             where:
+              image_uri: https://signing.today/sample/signature_appearance
               page: 1
               position: 'rect: 50, 100, 200, 150'
+              text:
+              - format:
+                - Firmato con SigningToday
+                - da {subject[commonName]}
+                - '{subject[C]}'
+                - '{subject[L]}'
+                - '{subject[S]}'
+                - '{subject[OU]}'
+                - '{subject[O]}'
+                - '{subject[E]}'
+                - in data {date:%d-%m-%Y %H:%M:%S}
+                align: middle
+                font:
+                  size: 50.0
+                  name: Universal
+              - format:
+                - Firmato con SigningToday
+                - da {subject[commonName]}
+                - '{subject[C]}'
+                - '{subject[L]}'
+                - '{subject[S]}'
+                - '{subject[OU]}'
+                - '{subject[O]}'
+                - '{subject[E]}'
+                - in data {date:%d-%m-%Y %H:%M:%S}
+                align: middle
+                font:
+                  size: 50.0
+                  name: Universal
             display_name: John
             constraints: {}
             signer: jdo
@@ -6547,8 +8405,38 @@ components:
       description: |
         Where will be allocated the Signature on the document. This field is made of two parameters, defined as follows
       example:
+        image_uri: https://signing.today/sample/signature_appearance
         page: 1
         position: 'rect: 50, 100, 200, 150'
+        text:
+        - format:
+          - Firmato con SigningToday
+          - da {subject[commonName]}
+          - '{subject[C]}'
+          - '{subject[L]}'
+          - '{subject[S]}'
+          - '{subject[OU]}'
+          - '{subject[O]}'
+          - '{subject[E]}'
+          - in data {date:%d-%m-%Y %H:%M:%S}
+          align: middle
+          font:
+            size: 50.0
+            name: Universal
+        - format:
+          - Firmato con SigningToday
+          - da {subject[commonName]}
+          - '{subject[C]}'
+          - '{subject[L]}'
+          - '{subject[S]}'
+          - '{subject[OU]}'
+          - '{subject[O]}'
+          - '{subject[E]}'
+          - in data {date:%d-%m-%Y %H:%M:%S}
+          align: middle
+          font:
+            size: 50.0
+            name: Universal
       properties:
         page:
           description: As can be guessed this is the page where to allocate the Signature
@@ -6562,6 +8450,34 @@ components:
           example: 'rect: 50, 100, 200, 150'
           format: any
           type: string
+        image_uri:
+          description: |
+            If provided this current image will be used for the signature, as a graphic appearance. This overrides the appearance definited in the Identity, which still will be the default one. If no signature appearance is provided in the Identity than will be used the default one of the Organization. If you choose to avoi the signature appearance than use this field as follows: _image_uri_: null
+          example: https://signing.today/sample/signature_appearance
+          format: url
+          type: string
+        text:
+          description: |
+            The text field will be filled with a list of paragraphs that will be displayed next to the graphic signature. Each paragraph may have its own font type, font dimension, line-up and a list of rows (strings) which will compose the paragraph. It is possible to specify some _placeholders_ as well. The paragraph objects will use default font and line-up if none was specified. If no _format_ field is specified than will be used the default one:
+              "format": [
+                "Signed by {subject[commonName]}",
+                "{subject[C]}",
+                "{subject[L]}",
+                "{subject[S]}",
+                "{subject[OU]}",
+                "{subject[O]}",
+                "{subject[E]}"
+              ]
+            Where {subject[...]} is a placeholder which will be filled with the certificate attirbutes. Follows the list of the placeholders:
+              - commonName: CommonName
+              - OU: OrganizationalUnit
+              - O: Organization
+              - L: Locality
+              - S: StateOrProvinceName
+              - C: CountryName
+          items:
+            $ref: '#/components/schemas/Signature_where_text'
+          type: array
     Token_webhooks:
       description: |
         SigningToday supports webhooks for the update of digital signature transactions and identities status. You can choose if to use or not webhooks and if you want to receive updates about digital signature transactions and/or identities. You can configurate it on application token level, in the _webhook field_
